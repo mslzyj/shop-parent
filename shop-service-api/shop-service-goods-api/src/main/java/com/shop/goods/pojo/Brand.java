@@ -15,7 +15,6 @@ import java.io.Serializable;
 @ApiModel(description = "Brand",value = "Brand")
 @Table(name="tb_brand")
 public class Brand implements Serializable{
-
 	@ApiModelProperty(value = "品牌id",required = false)
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
