@@ -16,7 +16,7 @@ public class RandomUtil {
     }
 
     public static void main(String[] args) {
-        String randomString = com.changgou.util.RandomUtil.getRandomString();
+        String randomString = RandomUtil.getRandomString();
         System.out.println(randomString);
     }
 }

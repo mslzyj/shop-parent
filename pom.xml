@@ -15,7 +15,6 @@
         <module>shop-gateway</module>
         <module>shop-service</module>
         <module>shop-service-api</module>
-        <module>changgou-web</module>
         <module>shop-web</module>
     </modules>
 

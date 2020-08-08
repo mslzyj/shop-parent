@@ -162,7 +162,7 @@ public class IdWorker {
 
     public static void main(String[] args) {
 
-        com.changgou.util.IdWorker idWorker=new com.changgou.util.IdWorker(0,0);
+       IdWorker idWorker=new IdWorker(0,0);
 
         for(int i=0;i<10000;i++){
             long nextId = idWorker.nextId();
