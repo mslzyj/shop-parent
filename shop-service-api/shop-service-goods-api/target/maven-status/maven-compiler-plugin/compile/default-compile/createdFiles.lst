@@ -1,0 +1,12 @@
+com\shop\goods\pojo\Album.class
+com\shop\goods\pojo\Brand.class
+com\shop\goods\pojo\Spec.class
+com\shop\goods\pojo\Template.class
+com\shop\goods\pojo\Para.class
+com\shop\goods\pojo\Pref.class
+com\shop\goods\pojo\CategoryBrand.class
+com\shop\goods\pojo\StockBack.class
+com\shop\goods\pojo\Category.class
+com\shop\goods\pojo\Spu.class
+com\shop\goods\pojo\Goods.class
+com\shop\goods\pojo\Sku.class

@@ -1,0 +1,9 @@
+com\shop\entity\Page.class
+com\shop\entity\Result.class
+com\shop\interceptor\FeignInterceptor.class
+com\shop\entity\PageResult.class
+com\shop\entity\StatusCode.class
+com\shop\util\DateUtil.class
+com\shop\util\RandomUtil.class
+com\shop\util\ConvertUtils.class
+com\shop\util\IdWorker.class

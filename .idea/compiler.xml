@@ -2,41 +2,36 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="shop-common-db" />
-        <module name="shop-service" />
+        <module name="shop-service-goods" />
+        <module name="shop-eureka-8081" />
         <module name="shop-common" />
         <module name="shop-web" />
-        <module name="shop-service-api" />
-        <module name="shop-gateway" />
+        <module name="shop-service-goods-api" />
         <module name="changgou-web" />
         <module name="shop-eureka-8082" />
-        <module name="shop-eureka-8081" />
+        <module name="shop-common-db" />
         <module name="shop-eureka-8080" />
+        <module name="shop-gateway" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="changgou-web" target="1.8" />
-      <module name="shop-erupt、、" target="1.5" />
-      <module name="shop-eureka-8081 (1)" target="1.8" />
-      <module name="shop-web" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="changgou-web" options="-parameters" />
       <module name="shop-common" options="-parameters" />
       <module name="shop-common-db" options="-parameters" />
       <module name="shop-eureka-8080" options="-parameters" />
       <module name="shop-eureka-8081" options="-parameters" />
-      <module name="shop-eureka-8081 (1)" options="-parameters" />
       <module name="shop-eureka-8082" options="-parameters" />
       <module name="shop-gateway" options="-parameters" />
-      <module name="shop-service" options="-parameters" />
+      <module name="shop-service" options="" />
       <module name="shop-service-api" options="-parameters" />
+      <module name="shop-service-goods" options="-parameters" />
+      <module name="shop-service-goods-api" options="-parameters" />
       <module name="shop-web" options="-parameters" />
     </option>
   </component>

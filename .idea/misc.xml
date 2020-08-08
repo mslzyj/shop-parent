@@ -6,13 +6,18 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/shop-eureka/pom.xml" />
-      </list>
-    </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/shop-erupt、、/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-service/shop-service-goods/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-common/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-service/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-common-db/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-gateway/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-service-api/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-service-api/shop-service-goods-api/pom.xml" />
         <option value="$PROJECT_DIR$/shop-web/pom.xml" />
-      </set>
+        <option value="$PROJECT_DIR$/shop-eureka/shop-eureka-8080/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-eureka/shop-eureka-8081/pom.xml" />
+        <option value="$PROJECT_DIR$/shop-eureka/shop-eureka-8082/pom.xml" />
+      </list>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
