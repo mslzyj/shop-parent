@@ -1,21 +1,26 @@
 package com.shop.entity;
 
-/**
- * 返回结果实体类
- */
-public class Result<T> {
+import java.io.Serializable;
 
+/**
+ * 描述
+ *
+ * @author 三国的包子
+ * @version 1.0
+ * @package entity *
+ * @since 1.0
+ */
+public class Result<T> implements Serializable {
     private boolean flag;//是否成功
     private Integer code;//返回码
     private String message;//返回消息
-
     private T data;//返回数据
 
     public Result(boolean flag, Integer code, String message, Object data) {
         this.flag = flag;
         this.code = code;
         this.message = message;
-        this.data = (T)data;
+        this.data = (T) data;
     }
 
     public Result(boolean flag, Integer code, String message) {
@@ -26,8 +31,8 @@ public class Result<T> {
 
     public Result() {
         this.flag = true;
-        this.code = com.shop.entity.StatusCode.OK;
-        this.message = "执行成功";
+        this.code = StatusCode.OK;
+        this.message = "操作成功!";
     }
 
     public boolean isFlag() {

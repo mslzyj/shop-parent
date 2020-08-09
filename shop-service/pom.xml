@@ -16,7 +16,6 @@
         <module>shop-service-goods</module>
     </modules>
 
-
     <!--依赖-->
     <dependencies>
         <dependency>

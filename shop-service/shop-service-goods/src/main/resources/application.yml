@@ -1,10 +1,10 @@
 server:
-  port: 9001
+  port: 18081
 spring:
   application:
     name: goods
   datasource:
-    driver-class-name: com.mysql.jdbc.Driver
+    driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://123.57.30.64:3306/shop_goods?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
     username: root
     password: 123456@Jian

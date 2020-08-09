@@ -10,12 +10,12 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>shop-eureka</module>
-        <module>shop-common</module>
         <module>shop-common-db</module>
         <module>shop-gateway</module>
         <module>shop-service</module>
         <module>shop-service-api</module>
         <module>shop-web</module>
+        <module>shop-common</module>
     </modules>
 
     <parent>
