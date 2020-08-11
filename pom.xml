@@ -16,6 +16,7 @@
         <module>shop-service-api</module>
         <module>shop-web</module>
         <module>shop-common</module>
+        <module>shop-service-canal</module>
     </modules>
 
     <parent>
