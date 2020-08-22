@@ -24,7 +24,7 @@ public class Sku implements Serializable{
 	@Id
     @Column(name = "id")
 	@JsonSerialize(using = ToStringSerializer.class)
-	private Long id;//商品id
+	private String id;//商品id
 	@ApiModelProperty(value = "商品条码",required = false)
     @Column(name = "sn")
 	private String sn;//商品条码
@@ -81,12 +81,12 @@ public class Sku implements Serializable{
 	private String status;//商品状态 1-正常，2-下架，3-删除
 
 	//get方法
-	public Long getId() {
+	public String  getId() {
 		return id;
 	}
 
 	//set方法
-	public void setId(Long id) {
+	public void setId(String id) {
 		this.id = id;
 	}
 	//get方法

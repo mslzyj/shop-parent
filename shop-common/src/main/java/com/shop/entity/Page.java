@@ -1,6 +1,7 @@
 package com.shop.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Page <T> implements Serializable{
@@ -234,5 +235,9 @@ public class Page <T> implements Serializable{
 			int cpage =17;
 			Page page = new Page(1001,cpage,50,7);
 			System.out.println("开始页:"+page.getLpage()+"__当前页："+page.getCurrentpage()+"__结束页"+page.getRpage()+"____总页数："+page.getLast());
+	}
+
+	public List getResult() {
+		return new ArrayList();
 	}
 }

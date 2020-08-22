@@ -34,19 +34,19 @@ public class SpuListener {
         if ("0".equals(oldData.get("is_marketable")) && ("1" +
                 "").equals(newData.get("is_marketable"))) {
             //将商品的spuid发送到mq
-            rabbitTemplate.convertAndSend(RabbitMQConfig.GOODS_UP_EXCHANGE, "", newData.get("id"));
+            rabbitTemplate.convertAndSend(RabbitMQConfig.SHOP_UP_EXCHANGE, "", newData.get("id"));
         }
 
         //获取最新下架的商品 1->0
         if ("1".equals(oldData.get("is_marketable")) && "0".equals(newData.get("is_marketable"))) {
             //将商品的spuid发送到mq
-            rabbitTemplate.convertAndSend(RabbitMQConfig.GOODS_DOWN_EXCHANGE, "", newData.get("id"));
+            rabbitTemplate.convertAndSend(RabbitMQConfig.SHOP_DOWN_EXCHANGE, "", newData.get("id"));
         }
 
         //获取最新被审核通过的商品  status    0->1
         if ("0".equals(oldData.get("status")) && "1".equals(newData.get("status"))) {
             //将商品的spuid发送到mq
-            rabbitTemplate.convertAndSend(RabbitMQConfig.GOODS_UP_EXCHANGE, "", newData.get("id"));
+            rabbitTemplate.convertAndSend(RabbitMQConfig.SHOP_UP_EXCHANGE, "", newData.get("id"));
         }
     }
 }
