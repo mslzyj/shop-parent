@@ -14,6 +14,7 @@ import java.util.List;
  * @date 2020/8/22 10:34
  */
 @RestController
+@ResponseBody
 @CrossOrigin
 @RequestMapping("/sku")
 public class SkuController {

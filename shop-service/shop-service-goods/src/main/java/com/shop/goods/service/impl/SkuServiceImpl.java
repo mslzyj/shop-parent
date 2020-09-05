@@ -25,7 +25,7 @@ public class SkuServiceImpl implements SkuService {
     public List<Sku> findByStatusAll(String status) {
         Sku sku = new Sku();
         sku.setStatus(status);
-        //sku.setId("100000003145");
+        sku.setCategoryName("手机");
         List<Sku> list = skuMapper.select(sku);
         return list;
     }

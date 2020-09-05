@@ -20,12 +20,12 @@ feign:
     enabled: true
 #超时配置
 ribbon:
-  ReadTimeout: 300000
+  ReadTimeout: 300000000
 
 hystrix:
   command:
     default:
       execution:
         isolation:
-          thread:
-            timeoutInMilliseconds: 10000
+         thread:
+            timeoutInMilliseconds: 10000000

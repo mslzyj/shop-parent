@@ -8,10 +8,30 @@ import com.shop.search.dao.SkuEsMapper;
 import com.shop.search.pojo.SkuInfo;
 import com.shop.search.service.SkuEsService;
 import org.elasticsearch.action.search.SearchRequest;
+import org.elasticsearch.action.search.SearchRequestBuilder;
 import org.elasticsearch.client.transport.TransportClient;
+import org.elasticsearch.index.query.BoolQueryBuilder;
+import org.elasticsearch.index.query.QueryBuilders;
+import org.elasticsearch.script.mustache.SearchTemplateResponse;
+import org.elasticsearch.search.SearchPhase;
+import org.elasticsearch.search.SearchPhaseResult;
+import org.elasticsearch.search.aggregations.Aggregations;
+import org.elasticsearch.search.internal.SearchContext;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.elasticsearch.core.ElasticsearchRestTemplate;
+import org.springframework.data.elasticsearch.core.ElasticsearchTemplate;
+import org.springframework.data.elasticsearch.core.aggregation.AggregatedPage;
+import org.springframework.data.elasticsearch.core.aggregation.impl.AggregatedPageImpl;
+import org.springframework.data.elasticsearch.core.mapping.IndexCoordinates;
+import org.springframework.data.elasticsearch.core.query.GetQuery;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQuery;
+import org.springframework.data.elasticsearch.core.query.NativeSearchQueryBuilder;
+import org.springframework.data.elasticsearch.core.query.Query;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
+import javax.naming.directory.SearchResult;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -27,6 +47,10 @@ public class SkuEsServiceImpl implements SkuEsService {
 
     @Autowired
     private SkuEsMapper skuEsMapper;
+
+    @Autowired
+    private ElasticsearchRestTemplate elasticsearchRestTemplate;
+
 
     /**
      * 导入sku数据到es
@@ -44,4 +68,13 @@ public class SkuEsServiceImpl implements SkuEsService {
 
         skuEsMapper.saveAll(skuInfos);
     }
+
+    @Override
+    public SkuInfo search(String id) {
+        System.out.println(id);
+        SkuInfo skuInfo = elasticsearchRestTemplate
+                .queryForObject(GetQuery.getById(id), SkuInfo.class);
+        return skuInfo;
+    }
+
 }

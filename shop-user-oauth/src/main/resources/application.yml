@@ -1,0 +1,39 @@
+server:
+  port: 9200
+spring:
+  application:
+    name: user-auth
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://123.57.30.64:3306/shop_user?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    username: root
+    password: 123456@Jian
+  redis:
+    host: 106.13.83.184
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+  main:
+    allow-bean-definition-overriding: true
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8080/eureka
+auth:
+  ttl: 3600  #token存储到redis的过期时间
+  clientId: shop1234   #客户端id
+  clientSecret: shop1234  #客户端秘钥
+  cookieDomain: localhost
+  cookieMaxAge: -1
+encrypt:
+  key-store:
+    location: classpath:/shop1234.jks   #证书路径
+    secret: shop1234            #秘钥
+    alias: shop1234        #证书别名
+    password: shop1234    #证书密码
