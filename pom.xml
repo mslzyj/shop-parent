@@ -18,6 +18,7 @@
         <module>shop-common</module>
         <module>shop-service-canal</module>
         <module>shop-user-oauth</module>
+        <module>shop-gateway</module>
     </modules>
 
     <parent>

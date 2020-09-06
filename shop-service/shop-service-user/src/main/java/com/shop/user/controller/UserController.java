@@ -5,6 +5,7 @@ import com.shop.entity.StatusCode;
 import com.shop.user.pojo.User;
 import com.shop.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,8 +35,10 @@ public class UserController {
 
     /**
      * 查询所有用户
+     * @PreAuthorize 配置权限，只有管理员能访问这个方法
      * @return
      */
+    @PreAuthorize("hasAnyRole('admin')")
     public Result findAll(){
         List<User> userList = userService.findAll();
         return new Result(true, StatusCode.OK,"查询成功",userList) ;

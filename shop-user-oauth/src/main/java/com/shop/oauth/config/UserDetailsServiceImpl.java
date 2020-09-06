@@ -41,6 +41,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
      */
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        //客户端信息认证
         String dd = passwordEncoder.encode("shop1234");
         System.out.println(dd);
         //取出身份，如果身份为空说明没有认证
@@ -54,6 +55,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
                 //静态方式
                // return new User(username,new BCryptPasswordEncoder().encode(clientSecret), AuthorityUtils.commaSeparatedStringToAuthorityList(""));
                 //数据库查找方式
+                //AuthorityUtils.commaSeparatedStringToAuthorityList("") 权限
                 return (UserDetails) new User(username,clientSecret, AuthorityUtils.commaSeparatedStringToAuthorityList(""));
             }
         }
@@ -61,8 +63,9 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         if (StringUtils.isEmpty(username)) {
             return null;
         }
-
+        // 用户信息认证
         String  password  = userFeign.findUserInfo(username).getPassword();
+        //用户权限/角色（查库）
         String permissions = "goods_list,seckill_list";
         UserJwt userDetails = new UserJwt(username,password,AuthorityUtils.commaSeparatedStringToAuthorityList(permissions));
         return userDetails;

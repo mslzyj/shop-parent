@@ -48,6 +48,7 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
     /***
      * 客户端信息配置
+     * 查数据库
      * @param clients
      * @throws Exception
      */
@@ -58,6 +59,7 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
     /***
      * 授权服务器端点配置
+     * 查数据库
      * @param endpoints
      * @throws Exception
      */
@@ -93,6 +95,7 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
     private KeyProperties keyProperties;
 
     //客户端配置
+    //从数据库加载客户端信息
     @Bean
     public ClientDetailsService clientDetails() {
         return new JdbcClientDetailsService(dataSource);

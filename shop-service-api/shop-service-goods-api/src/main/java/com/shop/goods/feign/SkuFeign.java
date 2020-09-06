@@ -23,4 +23,8 @@ public interface  SkuFeign {
      */
     @GetMapping("/status/{status}")
     Result<List<Sku>> findByStatusAll(@PathVariable String status);
+
+
+    @GetMapping("/sku/{id}")
+    public Result<Sku> findById(@PathVariable("id") String id);
 }
